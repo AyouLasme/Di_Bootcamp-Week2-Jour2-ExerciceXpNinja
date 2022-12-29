@@ -8,7 +8,7 @@ if(!Number(dateDeNaissanceP1) || !Number(dateDeNaissanceP2)) {
   }else{
     let agePersonne1 = dateActuel - dateDeNaissanceP1
     let agePersonne2 = dateActuel - dateDeNaissanceP2
-    let dateExact; //valeur qui va permettre de determiner la date a laquelle la personne2 aura la moitié de l'age de la personne1
+    let dateExact; //le Nombre d'année ajouté sur l'année actuelle pour que lepersonnage2 ait la moitié de l'age du personnage1 
     if (agePersonne1 > agePersonne2) {
         dateExact = agePersonne1 - 2*agePersonne2;
     }
@@ -17,7 +17,7 @@ if(!Number(dateDeNaissanceP1) || !Number(dateDeNaissanceP2)) {
     }
     console.log(dateExact)
     console.log(dateActuel)
-    let dateMoitiePersonne1 = dateActuel - dateExact
+    let dateMoitiePersonne1 = dateActuel + dateExact
     let message = "L'année à laquelle l'age de la personne 2 est la moitié de l'age de la personne 1 est " + String(dateMoitiePersonne1)
     console.log(dateMoitiePersonne1)
     alert(message);
